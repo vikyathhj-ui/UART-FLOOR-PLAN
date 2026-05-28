@@ -1,0 +1,76 @@
+{
+    "DESIGN_NAME": "uart_top",
+
+    "VERILOG_FILES": [
+        "dir::src/uart_top.v",
+        "dir::src/uart_tx.v",
+        "dir::src/uart_rx.v",
+        "dir::src/sync_fifo.v"
+    ],
+
+    "CLOCK_PORT": "clk",
+    "CLOCK_PERIOD": 10.0,
+
+    "BASE_SDC_FILE": "dir::constraints/uart.sdc",
+
+    "PDK": "sky130A",
+    "STD_CELL_LIBRARY": "sky130_fd_sc_hd",
+
+    "SYNTH_STRATEGY": "DELAY 0",
+    "SYNTH_BUFFERING": 1,
+    "SYNTH_SIZING": 1,
+    "SYNTH_MAX_FANOUT": 6,
+    "SYNTH_SHARE_RESOURCES": 1,
+    "SYNTH_NO_FLAT": 0,
+
+    "SYNTH_TIELO_CELL": "sky130_fd_sc_hd__conb_1",
+    "SYNTH_TIEHI_CELL": "sky130_fd_sc_hd__conb_1",
+
+    "FP_SIZING": "absolute",
+    "DIE_AREA": "0 0 250 250",
+    "CORE_AREA": "10 10 240 240",
+    "FP_ASPECT_RATIO": 1,
+    "FP_CORE_UTIL": 45,
+    "FP_IO_HLENGTH": 4,
+    "FP_IO_VLENGTH": 4,
+
+    "FP_PDN_TCL": "dir::pdn/pdn.tcl",
+    "FP_PDN_CORE_RING": 1,
+    "FP_PDN_HPITCH": 80.0,
+    "FP_PDN_VPITCH": 80.0,
+    "FP_PDN_HWIDTH": 1.6,
+    "FP_PDN_VWIDTH": 1.6,
+    "FP_PDN_HOFFSET": 16.32,
+    "FP_PDN_VOFFSET": 16.65,
+    "FP_PDN_CORE_RING_VWIDTH": 1.6,
+    "FP_PDN_CORE_RING_HWIDTH": 1.6,
+    "FP_PDN_CORE_RING_VSPACING": 1.7,
+    "FP_PDN_CORE_RING_HSPACING": 1.7,
+
+    "PL_TARGET_DENSITY": 0.40,
+    "PL_RANDOM_GLB_PLACEMENT": 0,
+    "PL_RESIZER_DESIGN_OPTIMIZATIONS": 1,
+    "PL_RESIZER_TIMING_OPTIMIZATIONS": 1,
+    "PL_RESIZER_MAX_WIRE_LENGTH": 500,
+
+    "CTS_CLK_BUFFER_LIST": "sky130_fd_sc_hd__clkbuf_4 sky130_fd_sc_hd__clkbuf_8",
+    "CTS_ROOT_BUFFER": "sky130_fd_sc_hd__clkbuf_16",
+    "CTS_MAX_CAP": 0.5,
+    "CTS_TARGET_SKEW": 200,
+    "CTS_TOLERANCE": 100,
+
+    "GRT_ADJUSTMENT": 0.15,
+    "GRT_ANT_ITERS": 25,
+    "GRT_MAX_DIODE_INS_ITERS": 10,
+
+    "DRT_OPT_ITERS": 64,
+    "WIRE_RC_LAYER": "met2",
+
+    "DIODE_INSERTION_STRATEGY": 4,
+
+    "RUN_FILL_INSERTION": 1,
+    "RUN_DRC": 1,
+    "LVS_INSERT_POWER_PINS": 1,
+
+    "GLB_RT_MAX_DIODE_INS_ITERS": 5
+}
